@@ -70,14 +70,14 @@ a.btn:before {
     inset: 0;
     background: var(--color_1);
     z-index: -1;
-    clip-path: polygon(0 0, 100% 0%, 40% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 54% 100%, 0% 100%);
     width: 30%;
-    transition: all 0.1s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 a.btn:hover:before {
-    width: 100%;
-    clip-path: inherit;
+    width: 111%;
+    clip-path: polygon(0 0, 100% 0%, 86% 100%, 0% 100%);
 }
 
 a.btn i {
