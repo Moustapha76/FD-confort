@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
+@font-face {
+    font-family: 'Great Sejagad';
+    src: url('GreatSejagad.eot');
+    src: url('GreatSejagad.eot?#iefix') format('embedded-opentype'), url('GreatSejagad.woff2') format('woff2'), url('GreatSejagad.woff') format('woff'), url('GreatSejagad.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Great Sejagad';
+    src: url('GreatSejagad_1.eot');
+    src: url('GreatSejagad_1.eot?#iefix') format('embedded-opentype'), url('GreatSejagad_1.woff2') format('woff2'), url('GreatSejagad_1.woff') format('woff'), url('GreatSejagad_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color_0: #fff;
+    --color_1: #FE5000;
+    --color_2: #1D1E21;
+    --font_1: "Great Sejagad";
+    --font_2: "Anton";
+    --font_3: "Roboto";
+}
+
+header {
+    height: 100vh;
+    background: url(./assets/banner/hero_slider_02.jpg);
+    padding: 0 8%;
+    position: relative;
+}
+
+header:before {
+    position: absolute;
+    height: 240px;
+    background: url(./assets/white_bottom_wave_01.png);
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    width: 100%;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a.btn {
+    position: relative;
+    color: var(--color0);
+    text-decoration: none;
+    margin: 40px 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: fit-content;
+    padding: 20px;
+    z-index: 1;
+    text-align: center;
+}
+
+a.btn:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color_1);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0%, 40% 100%, 0% 100%);
+    width: 30%;
+    transition: all 0.1s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+a.btn:hover:before {
+    width: 100%;
+    clip-path: inherit;
+}
+
+a.btn i {
+    padding: 0 0 0 15px;
+}
+
+.btn-partage a {
+    color: var(--color_0);
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.banner span {
+    font-family: var(--font_1);
+    font-size: 5rem;
+    color: var(--color_1);
+}
+
+.banner {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color_0);
+    padding: 0 10%;
+    position: relative;
+}
+
+.banner p {
+    font-size: 20px;
+    width: 50%;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.banner h1 {
+    font-family: var(--font_2);
+    text-transform: uppercase;
+    font-size: 7rem;
+    letter-spacing: 10px;
+}
+
+body {
+    color: var(--color_2);
+    font-family: var(--font_3);
+}
+
+h1 {
+    color: ;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
