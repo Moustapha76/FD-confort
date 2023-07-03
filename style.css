@@ -27,19 +27,24 @@
 }
 
 header {
-    height: 100vh;
-    background: url(./assets/banner/hero_slider_02.jpg);
     padding: 0 8%;
-    position: relative;
+    z-index: 999;
+    position: fixed;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s linear;
 }
-
-header:before {
+.headerFixed{padding: 0;}
+.img-area:before {
+    z-index: 9;
     position: absolute;
-    height: 240px;
+    height: 150px;
     background: url(./assets/white_bottom_wave_01.png);
     bottom: 0;
     left: 0;
-    background-size: contain;
+    background-size: 100%;
     width: 100%;
     content: "";
     background-repeat: no-repeat;
@@ -49,6 +54,17 @@ header:before {
 * {
     padding: 0;
     margin: 0;
+}
+
+section.section-2 .stats .item p {
+    font-family: var(--font_2);
+    font-size: 30px;
+    opacity: .7;
+    letter-spacing: 1px;
+}
+
+h2 {
+    letter-spacing: 1px;
 }
 
 a.btn {
@@ -74,7 +90,17 @@ a.btn:before {
     width: 30%;
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
+/* slick */
+.img-area {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+}
 
+/* slick */
 a.btn:hover:before {
     width: 111%;
     clip-path: polygon(0 0, 100% 0%, 86% 100%, 0% 100%);
@@ -97,27 +123,31 @@ a.btn i {
 }
 
 .banner {
-    height: 75%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: var(--color_0);
-    padding: 0 10%;
-    position: relative;
+    padding: 0 0%;
+    position: absolute;
+    top: 28vh;
+    width: 100%;
+    left: 13%;
+    line-height: 1;
 }
 
 .banner p {
-    font-size: 20px;
+    font-size: 22px;
     width: 50%;
     letter-spacing: 1px;
     line-height: 1.5;
+    padding: 20px 0;
 }
 
 .banner h1 {
     font-family: var(--font_2);
     text-transform: uppercase;
     font-size: 7rem;
-    letter-spacing: 10px;
+    letter-spacing: 2px;
 }
 
 body {
@@ -125,16 +155,17 @@ body {
     font-family: var(--font_3);
 }
 
-h1 {
-    color: ;
-}
-
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
-
+.navbarFixed{    
+    background: var(--color_2);
+    height: 10vh;
+    transition: all .3s linear;
+}
 .navbar ul {
     display: flex;
     list-style: none;
@@ -147,4 +178,194 @@ h1 {
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    position: relative;
+}
+
+.navbar ul li a:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background: var(--color_1);
+    left: 0;
+    bottom: -10px;
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.navbar ul li a:hover:before,.navbar ul li a.active:before {
+    width: 100%;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 10% 8rem;
+    position: relative;
+}
+
+section.section-2 {
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    background: url(./assets/background_01.jpg);
+    background-size: auto;
+    background-position: top;
+    background-attachment: fixed;
+}
+section.section-2::before{
+    content: '';
+    position: absolute;
+    background: url(./assets/white_bottom_wave_02.png);
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-size: 100%;
+    left: 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+section.section-2 .stats {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+section.section-2 .stats .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color_0);
+}
+
+section.section-2 .stats .item span.number {
+    font-size: 4rem;
+    font-family: var(--font_2);
+    padding: 10px;
+}
+
+section.section-2 .stats .item i {
+    font-size: 28px;
+    background: var(--color_1);
+    padding: 25px;
+    color: var(--color_0);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.section-1 .header {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section.section-1 .header .title {
+    position: relative;
+    line-height: 0.9;
+}
+
+section.section-1 .header .title span {
+    font-family: var(--font_1);
+    color: var(--color_1);
+    font-size: 5rem;
+}
+
+section.section-1 .header .title h2 {
+    font-family: var(--font_2);
+    font-size: 4rem;
+}
+
+section.section-1 .bloc-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    grid-template-rows: 500px 500px;
+}
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.card:hover img {transform: scale(1.2);}
+
+.card:hover .description {bottom: 185px;}
+
+.card:hover .description p {
+    opacity: 1;
+}
+
+.card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s linear;
+}
+
+.card:nth-child(even) .description {
+    position: absolute;
+    background: transparent;
+    color: var(--color_0);
+    bottom: -105px;
+}
+
+.card:nth-child(even):hover .description {
+    bottom: 10px;
+}
+
+.card:nth-child(even):hover .description p {
+    opacity: 1;
+}
+
+.description {
+    position: relative;
+    background: var(--color_0);
+    padding: 20px;
+    transition: all .3s linear;
+    bottom: 80px;
+    height: 145px;
+}
+
+.title-description {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.description p {
+    letter-spacing: 1px;
+    padding-top: 25px;
+    position: relative;
+    line-height: 1.6;
+    transition: all .3s linear;
+    opacity: 0;
+}
+
+.title-description h3 {
+    text-transform: uppercase;
+    font-family: var(--font_2);
+    letter-spacing: 0px;
+    font-size: 37px;
+}
+
+.title-description span {
+    font-family: var(--font_2);
+    padding-right: 10px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: var(--color_2);
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+.card:nth-child(even) .description .title-description span {
+    -webkit-text-stroke: var(--color_0);
+    -webkit-text-stroke-width: 1px;
 }

@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FD Confort</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 </head>
 
 <body>
-    <header>
+    <header id="wrapper">
         <div class="navbar">
             <a href="#" class="logo"><img src="./assets/logo.png" alt="logo du site"></a>
             <ul>
                 <li>
-                    <a href="#home">Home</a>
+                    <a class="active" href="#home">Home</a>
                 </li>
                 <li>
                     <a href="#about">About us</a>
@@ -38,13 +40,145 @@
                 <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
             </div>
         </div>
-        <div class="banner">
-            <span>Tree of life</span>
-            <h1>Best natural</h1>
-            <p>We all need a little adventure in life. A forest of these trees is a too much for one man to see so come with us.</p>
-            <a href="#" class="btn">VIEW TRAILS <i class="fa-solid fa-up-right-from-square"></i></a>
-        </div>
     </header>
+    <div class="img-area" id="wrapper">
+        <div class="slide slide-1">
+            <img src="./assets/banner/hero_slider_01.jpg" alt="slider image">
+            <div class="banner">
+                <span>Tree of life</span>
+                <h1>Best natural</h1>
+                <p>We all need a little adventure in life. A forest of these trees is a too much for one man to see so come with us.</p>
+                <a href="#" class="btn">VIEW TRAILS <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="slide slide-2">
+        <img src="./assets/banner/hero_slider_02.jpg" alt="slider image">
+            <div class="banner">
+                <span>Adventure</span>
+                <h1>EXTREME</h1>
+                <p>The tropical rain forests are a telling example. Once cut down, they recover. Rainfall drops, the climate warms.</p>
+                <a href="#" class="btn">VIEW TRAILS <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <img src="./assets/banner/hero_slider_03.jpg" alt="slider image">
+            <div class="banner">
+                <span>Thrilling</span>
+                <h1>OUTDOORS</h1>
+                <p>Get outdoors and explore wild places. Explore the land that belongs you and help care for it.</p>
+                <a href="#" class="btn">VIEW TRAILS <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="section-1">
+            <div class="header">
+                <div class="title">
+                    <span>Explore the land</span>
+                    <h2>THAT BELONGS TO YOU</h2>
+                </div>
+                <a href="#" class="btn">All programs <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div class="bloc-cards">
+                <div class="card">
+                    <img src="./assets/card_image_01.jpg" alt="card">
+                    <div class="description">
+                        <div class="title-description">
+                            <span>#1</span><h3>Summer hiking</h3>
+                        </div>
+                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/card_image_02.jpg" alt="card">
+                    <div class="description">
+                        <div class="title-description">
+                            <span>#2</span><h3>Rafting weekend</h3>
+                        </div>
+                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/card_image_03.jpg" alt="card">
+                    <div class="description">
+                        <div class="title-description">
+                            <span>#3</span><h3>Camping in nature</h3>
+                        </div>
+                        <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/card_image_04.jpg" alt="card">
+                    <div class="description">
+                        <div class="title-description">
+                            <span>#4</span><h3>Hiking tour spring</h3>
+                        </div>
+                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/card_image_05.jpg" alt="card">
+                    <div class="description">
+                        <div class="title-description">
+                            <span>#5</span><h3>Hiking & climbing</h3>
+                        </div>
+                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/card_image_06.jpg" alt="card">
+                    <div class="description">
+                        <div class="title-description">
+                            <span>#6</span><h3>Senior tours</h3>
+                        </div>
+                        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="stats">
+                <div class="item">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <span data-goal="256" class="number">0</span>
+                    <p>MOUNTAIN TOPS</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-socks"></i>
+                    <span data-goal="390" class="number">0</span>
+                    <p>FEET CLIMBED</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-person-hiking"></i>
+                    <span data-goal="359" class="number">0</span>
+                    <p>MEMBERS</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-road"></i>
+                    <span data-goal="235" class="number">0</span>
+                    <p>MILES PER DAY</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-3"></section>
+        <section class="section-4"></section>
+        <section class="section-5"></section>
+    </main>
+    
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+           $('.img-area').slick({
+               dots: true,
+               arrows: true,
+               autoplay: true,
+               fade: true,
+               autoplaySpeed: 3000
+           }) 
+        });
+    </script>
 </body>
 
 </html>
