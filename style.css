@@ -264,19 +264,78 @@ section.section-1 .header {
     justify-content: space-between;
     width: 100%;
 }
+section.section-3 .title {
+    text-align: center;
+    padding-bottom: 4rem;
+}
 
-section.section-1 .header .title {
+section.section-3 {
+    padding: 6rem 10%;
+}
+
+section.section-3 .team {
+    display: flex;
+    grid-gap: 40px;
+}
+
+section.section-3 .team .item {
+    height: 440px;
+    overflow: hidden;
+}
+
+section.section-3 .team .item img {
+    transition: all .3s linear;
+}
+
+section.section-3 .team .item:hover img {
+    transform: scale(1.2);
+}
+
+section.section-3 .team .item .description h3 {
+    font-family: var(--font_2);
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: var(--color_0);
+    line-height: 1;
+}
+
+section.section-3 .team .item .description span {
+    color: var(--color_0);
+    display: block;
+    padding: 10px 0 20px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+section.section-3 .team .item .description .detail-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    color: var(--color_1);
+}
+
+section.section-3 .team .item .description .detail-group a {
+    color: var(--color_0);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section.section-3 .team .item .description .rs i {
+    margin: 0 10px 0 0;
+}
+.title {
     position: relative;
     line-height: 0.9;
 }
 
-section.section-1 .header .title span {
+.title span {
     font-family: var(--font_1);
     color: var(--color_1);
     font-size: 5rem;
 }
 
-section.section-1 .header .title h2 {
+.title h2 {
     font-family: var(--font_2);
     font-size: 4rem;
 }
@@ -328,9 +387,20 @@ section.section-1 .bloc-cards {
     position: relative;
     background: var(--color_0);
     padding: 20px;
-    transition: all .3s linear;
+    transition: all .5s linear;
     bottom: 80px;
     height: 145px;
+}
+
+section.section-3 .team .item:hover .description {
+    bottom: 240px;
+    background: linear-gradient(45deg, black, transparent);
+}
+
+section.section-3 .team .item .description {
+    background: transparent;
+    height: 125px;
+    bottom: 183px;
 }
 
 .title-description {
