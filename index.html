@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="wrapper">
+    <header>
         <div class="navbar">
             <a href="#" class="logo"><img src="./assets/logo.png" alt="logo du site"></a>
             <ul>
@@ -41,7 +41,7 @@
             </div>
         </div>
     </header>
-    <div class="img-area" id="wrapper">
+    <div class="img-area">
         <div class="slide slide-1">
             <img src="./assets/banner/hero_slider_01.jpg" alt="slider image">
             <div class="banner">
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="slide slide-2">
-        <img src="./assets/banner/hero_slider_02.jpg" alt="slider image">
+            <img src="./assets/banner/hero_slider_02.jpg" alt="slider image">
             <div class="banner">
                 <span>Adventure</span>
                 <h1>EXTREME</h1>
@@ -216,8 +216,58 @@
                 </div>
             </div>
         </section>
-        <section class="section-4"></section>
-        <section class="section-5"></section>
+        <section class="section-4">
+            <div class="testimony">
+                <div class="testimonial">
+                    <img src="./assets/testimonial_01.png" alt="testimonial">
+                    <div class="speech">
+                        <img class="rate" src="./assets/stars.svg" alt="note">
+                        <p>These guys are great! I am always happy to have new people to climb with. Together, we create an energy that you just want to be a part of! </p>
+                        <img src="./assets/signature_01.png" alt="signature">
+                        <h4>Robert Mullingan</h4>
+                        <span>Recreational climber</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="./assets/testimonial_02.png" alt="testimonial">
+                    <div class="speech">
+                        <img class="rate" src="./assets/stars.svg" alt="note">
+                        <p>Success comes to those who have an entire mountain of gold that they continually mine, not those who find one and try to live on it for fifty years.</p>
+                        <img src="./assets/signature_01.png" alt="signature">
+                        <h4>Roberta Flannagan</h4>
+                        <span>Personal Workout</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="./assets/testimonial_03.png" alt="testimonial">
+                    <div class="speech">
+                        <img class="rate" src="./assets/stars.svg" alt="note">
+                        <p>If we choose to walk into a forest where a tiger lives, we are taking a chance. If we visit the desert or climb a mountain or enter a where snakes.</p>
+                        <img src="./assets/signature_01.png" alt="signature">
+                        <h4>John maxwell</h4>
+                        <span>Recreational climber</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-5">
+           <div class="contact-form">
+                <div class="title">
+                    <span>Questions ?</span>
+                    <h2>Get in touch</h2>
+                </div>
+                <form action="#">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="email" name="email" id="email" placeholder="Email *" required>
+                   <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your message"></textarea>
+                   
+                   <a href="#" class="btn" type="submit">Send now <i class="fa-solid fa-up-right-from-square"></i></a>
+                </form>
+           </div>
+           <div class="contact-img">
+            <img src="./assets/background_03.jpg" alt="image">
+           </div>
+        </section>
     </main>
     
     <script src="main.js"></script>
@@ -227,6 +277,15 @@
         $(document).ready(function(){
            $('.img-area').slick({
                dots: true,
+               arrows: true,
+               autoplay: true,
+               fade: true,
+               autoplaySpeed: 3000
+           }) 
+        });
+        $(document).ready(function(){
+           $('.testimony').slick({
+               dots: false,
                arrows: true,
                autoplay: true,
                fade: true,
