@@ -21,9 +21,12 @@
     --color_0: #fff;
     --color_1: #FE5000;
     --color_2: #1D1E21;
-    --font_1: "Great Sejagad";
-    --font_2: "Anton";
-    --font_3: "Roboto";
+    --font_1:
+    "Great Sejagad";
+    --font_2:
+    "Anton";
+    --font_3:
+    "Roboto";
 }
 
 header {
@@ -508,13 +511,13 @@ section.section-5 {
 
 .contact-form form input, .contact-form form textarea {
     margin: 10px 0;
-    padding: 15px 15px;
+    padding: 15px 0px;
     font-size: 20px;
     color: var(--color_3);
     border: none;
     border-bottom: 1px solid var(--color_1);
 }
-
+.contact-form form input:focus, .contact-form form textarea:focus{outline: none;}
 .contact-img {
     width: 50%;
 }
@@ -523,4 +526,44 @@ section.section-5 {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--color_2);
+    padding: 5rem 10%;
+    color: var(--color_0);
+    font-family: var(--font_3);
+}
+
+footer .bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+
+footer .bloc img {
+    width: auto;
+    height: auto;
+    padding-bottom: 3rem;
+}
+
+footer .bloc h4 {
+    color: var(--color_1);
+    font-family: var(--font_2);
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+footer .bloc ul li {
+    list-style: none;
+}
+
+footer .bloc ul li a {
+    text-decoration: none;
+    color: var(--color_0);
 }
