@@ -527,7 +527,8 @@ section.section-5 {
     width: 100%;
     object-fit: cover;
 }
-footer {
+footer{display: flex;flex-direction: column;}
+footer .bande-1 {
     display: flex;
     justify-content: space-evenly;
     background: var(--color_2);
@@ -543,7 +544,9 @@ footer .bloc {
     line-height: 1.7;
     letter-spacing: 1px;
 }
-
+footer .bloc table tr td:nth-child(1){
+    padding-right: 20px;
+}
 footer .bloc img {
     width: auto;
     height: auto;
@@ -566,4 +569,16 @@ footer .bloc ul li {
 footer .bloc ul li a {
     text-decoration: none;
     color: var(--color_0);
+}.bande-2 {
+    background: var(--color_1);
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+    color: var(--color_0);
+    text-transform: uppercase;
+    font-family: var(--font_3);
+}
+
+.bande-2 i {
+    color: var(--color_2);
 }
