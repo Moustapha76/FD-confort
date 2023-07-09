@@ -9,6 +9,9 @@ function startCount(el){
 }
 
 let navbar = document.querySelector('.navbar');
+let menu = document.querySelector('.navbar ul');
+let closeBtn = document.querySelector('button.close');
+let openMenu = document.querySelector('input[type="checkbox"]');
 let header = document.querySelector('header');
 
 let section = document.querySelector('section.section-2');
@@ -33,4 +36,10 @@ window.addEventListener('scroll',function(e){
         }
         start = true;
     }
+})
+closeBtn.addEventListener('click',function(){
+    menu.style.display = 'none';
+})
+openMenu.addEventListener('click',function(){
+    menu.style.display = 'flex';
 })

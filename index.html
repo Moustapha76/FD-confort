@@ -16,7 +16,10 @@
     <header>
         <div class="navbar">
             <a href="#" class="logo"><img src="./assets/logo.png" alt="logo du site"></a>
+            <label for="menu"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" name="menu" id="menu">
             <ul>
+                <button class="close"><i class="fa-solid fa-xmark"></i> Fermer</button>
                 <li>
                     <a class="active" href="#home">Home</a>
                 </li>
@@ -327,7 +330,7 @@
     <script>
         $(document).ready(function(){
            $('.img-area').slick({
-               dots: true,
+               dots: false,
                arrows: true,
                autoplay: true,
                fade: true,

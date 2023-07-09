@@ -59,30 +59,6 @@ header {
     margin: 0;
 }
 
-.testimony .testimonial .speech {
-    line-height: 1.7;
-}
-
-.testimony .testimonial h4 {
-    color: var(--color_1);
-    text-transform: uppercase;
-    font-size: 22px;
-    line-height: 1;
-}
-
-.testimony .testimonial span {
-    font-size: 20px;
-    font-family: var(--font_3);
-    text-transform: capitalize;
-    font-size: 18px;
-}
-
-section.section-2 .stats .item p {
-    font-family: var(--font_2);
-    font-size: 30px;
-    opacity: .7;
-    letter-spacing: 1px;
-}
 
 h2 {
     letter-spacing: 1px;
@@ -112,8 +88,14 @@ a.btn:before {
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 a.logo img{max-width: 200px;}
-.navbarFixed a.logo img{max-width: 100px;}
+.navbarFixed a.logo img{max-width: 150px;}
 /* slick */
+.img-area .slick-next{right: 27px;font-size: 30px;}
+.img-area .slick-prev{left: 25px;z-index: 9;}
+.testimony .slick-next{right: 20px;top: 80%;}
+.testimony .slick-prev{left: 20px;z-index: 9;top: 30%;}
+.slick-prev:before, .slick-next:before{font-size: 30px;}
+
 .img-area,.testimony {
     width: 100%;
     position: relative;
@@ -137,11 +119,37 @@ a.logo img{max-width: 200px;}
     grid-gap: 40px;
     letter-spacing: 1px;
 }
+.testimony .testimonial .speech {
+    line-height: 1.7;
+}
+
+.testimony .testimonial h4 {
+    color: var(--color_1);
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.testimony .testimonial span {
+    font-size: 20px;
+    font-family: var(--font_3);
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+section.section-2 .stats .item p {
+    font-family: var(--font_2);
+    font-size: 30px;
+    opacity: .7;
+    letter-spacing: 1px;
+}
+
 img{
     width: 100%;
 }
 
 /* slick */
+
 a.btn:hover:before {
     width: 111%;
     clip-path: polygon(0 0, 100% 0%, 86% 100%, 0% 100%);
@@ -236,6 +244,10 @@ body {
 .navbar ul li a:hover:before,.navbar ul li a.active:before {
     width: 100%;
 }
+.navbar label, 
+.navbar input{
+    display: none;
+} 
 section {
     display: flex;
     flex-direction: column;
@@ -258,7 +270,7 @@ section.section-2::before{
     content: '';
     position: absolute;
     background: url(./assets/white_bottom_wave_02.png);
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
     height: 150px;
     background-size: 100%;
@@ -304,6 +316,7 @@ section.section-1 .header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 section.section-3 .title {
     text-align: center;
@@ -488,8 +501,9 @@ section.section-3 .team .item .description {
 .testimony > div img {
     width: 200px;
 }
+img.rate{padding: 15px 0;}
 section.section-4{position: relative;background: url(./assets/background_02.jpg);background-attachment: fixed;background-position: center;background-size: cover;height: 500px;display: flex;align-items: center;justify-content: center;}
-section.section-4::before{content: '';position: absolute;background: url(./assets/white_top_wave_01.png);width: 100%;height: 160px;background-position: top;background-repeat: no-repeat;background-size: 100%;top: 0;}
+section.section-4::before{content: '';position: absolute;background: url(./assets/white_top_wave_01.png);width: 100%;height: 160px;background-position: top;background-repeat: no-repeat;background-size: 100%;top: -1px;}
 section.section-4::after{content: '';position: absolute;background: url(./assets/white_bottom_wave_02.png);width: 100%;height: 180px;background-position: bottom;background-repeat: no-repeat;background-size: 100%;bottom: -2px;}
 section.section-5 {
     padding: 5rem 10%;
@@ -581,4 +595,119 @@ footer .bloc ul li a {
 
 .bande-2 i {
     color: var(--color_2);
+}
+button.close{display: none;}
+@media (max-width: 991px){
+    .img-area, .testimony{height: 45vh;}
+    .banner h1{font-size: 3rem;}
+    .banner span{font-size: 2rem;}
+    .banner p{width: 70%;}
+    .banner{top: 12vh;}
+    .banner a.btn{margin: 0;}
+    button.close {
+        position: absolute;
+        top: 61px;
+        font-size: 30px;
+        background: transparent;
+        color: var(--color_1);
+        word-spacing: 23px;
+        border: none;
+        display: block;
+    }
+    .navbar ul{
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        right: 0px;
+        background: var(--color_2);
+        width: 400px;
+        z-index: 9;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        transition: all .3s linear;
+    }
+    .navbar ul li a{
+        font-size: 3rem;
+        line-height: 3;
+        font-family: var(--font_2);
+    }
+    .navbar label{display: block;color: var(--color_0);font-size: 50px;}
+    section.section-1 .bloc-cards{grid-template-columns: 1fr;}
+    .btn-partage {
+        position: fixed;
+        right: 0;
+        top: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-partage a{
+        background: var(--color_1);
+        margin: 1px 0;
+        width: 60px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .title h2,.title span{font-size: 2rem;}
+    .navbar{justify-content: space-between;padding: 0 10%;}
+    header{padding: 0 4%;}
+    .img-area:before{height: 70px;bottom: 15px;}
+    
+    section.section-2 .stats{flex-wrap: wrap;justify-content: center;grid-gap: 30px;}
+    section.section-2 .stats .item{width: 300px;height: 300px;justify-content: center;background-color: var(--color_2);}
+    section.section-2{height: auto;padding: 15% 0;}
+    section.section-2::before{height: 70px;}
+    section.section-3 .team{flex-wrap: wrap;}
+    section.section-3 .team .item{height: auto;position: relative;}
+    section.section-3 .team .item .description{height: auto;bottom: 0;background-color: var(--color_2);position: absolute;width: 100%;}
+    section.section-3 .team .item:hover .description{bottom: 0;}
+    section.section-4{height: 700px;padding: 0% 5%;}
+    .testimony .slick-prev{top: 80%;}
+    section.section-4::after{height: 80px;}
+    footer .bande-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+}
+@media (max-width: 576px) {
+    a.logo img{max-width: 110px;}
+    .img-area, .testimony{height: auto;}
+    .banner{
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%);
+        justify-content: center;
+        align-items: center;}
+    .banner p{display: none;}
+    .banner h1{font-size: 2rem;padding-bottom: 15px;}
+    .img-area:before{height: 40px;bottom: 0;}
+    a.btn{padding: 10px;font-size: 12px;}
+    .navbar label{font-size: 35px;}
+    .title h2, .title span{font-size: 20px;}
+    section.section-1 .header{flex-direction: column;align-items: center;justify-content: center;padding-bottom: 0;}
+    a.btn{padding: 15px;}
+    .title-description h3{font-size: 25px;}
+    .card:hover .description {
+        bottom: 230px;
+    }
+    .card .description{height: 200px;}
+    .testimony .testimonial{flex-direction: column;}
+    .testimony .testimonial p{font-size: 20px;}
+    .testimony > div img{width: 120px;}
+    .navbar ul li a{line-height: 3;font-size: 30px;}
+    .testimony .slick-next{top: 20%;}
+    .testimony .slick-prev{left: 80%;top: 20%;}
+    .contact-img{display: none;}
+    .contact-form{width: 100%;}
+    .btn-partage a{width: 40px;height: 50px;font-size: 18px;}
+    footer .bande-1{grid-template-columns: 1fr;}
+    footer .bloc h4{font-size: 30px;font-size: 20px;}
 }
