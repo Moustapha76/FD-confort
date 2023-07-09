@@ -57,6 +57,7 @@ header {
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth ;
 }
 
 
@@ -163,7 +164,9 @@ a.btn i {
     color: var(--color_0);
     margin: 0 15px;
     font-size: 18px;
+    transition: all .3s linear;
 }
+.btn-partage a:hover{color: var(--color_1);}
 
 .banner span {
     font-family: var(--font_1);
@@ -562,7 +565,7 @@ footer .bloc table tr td:nth-child(1){
     padding-right: 20px;
 }
 footer .bloc img {
-    width: auto;
+    width: 190px;
     height: auto;
     padding-bottom: 3rem;
 }

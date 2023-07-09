@@ -20,7 +20,6 @@ let start = false;
 
 window.addEventListener('scroll',function(e){
     let x = window.scrollY
-    console.log(x)
     if(x > 0){
         navbar.classList.add('navbarFixed')
         header.classList.add('headerFixed')
@@ -42,4 +41,15 @@ closeBtn.addEventListener('click',function(){
 })
 openMenu.addEventListener('click',function(){
     menu.style.display = 'flex';
+})
+
+
+let links = document.querySelectorAll('.navbar ul li a');
+links.forEach(element => {
+    element.addEventListener('click', () => {
+        links.forEach(element => {
+            element.classList.remove('active')
+        });
+        element.classList.add('active')
+    })
 })
